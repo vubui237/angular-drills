@@ -1,7 +1,34 @@
-<html ng-app="apiApp">
-	<body>
+<html ng-app="app">
+	<body ng-controller="controller">
+		<h3>Welcome to the PokeMountain</h3>
+		<input type="text" ng-model="searchData" placeholder="Find a pokemon"><button type="button" ng-click="getData(searchData)">Search</button>
+			<img ng-src="{{picture}}"><br>
+			Pokedex ID: {{pID}}<br>
+			Name: {{pName}}<br>
+			Height: {{pHeight}}<br>
+			Weight: {{pWeight}}<br>
+			Attacks: <ol>
+			<li>{{move1}}</li>
+			<li>{{move2}}</li>
+			<li>{{move3}}</li>
+			<li>{{move4}}</li>
+			<li>{{move5}}</li>
+			</ol>
+
+		</div>
+		<!-- This code shows the first 20 pokemon - reference back. -->
+		<!-- <ul>
+		<li ng-repeat="kat in kitkats">{{kat.name}}<button type="button" ng-click="getData(kat.url)">+</button></li>
+		</ul> -->
+
 		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+
+
+
+
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
